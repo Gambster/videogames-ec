@@ -1,7 +1,3 @@
-export default function Home() {
-  return (
-    <main className="" style={{ backgroundColor: "red" }}>
-      asddsad
-    </main>
-  );
+export default function Index() {
+  return <div>Hello world!</div>;
 }

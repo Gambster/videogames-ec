@@ -1,11 +1,10 @@
-import { Fragment } from "react";
-import type { AppProps } from "next/app";
+import Header from "@/components/Header";
 
 const Main = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div style={{ backgroundColor: "blue" }}>
+    <div>
+      <Header />
       {children}
-      xxx
     </div>
   );
 };
