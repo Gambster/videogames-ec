@@ -11,9 +11,9 @@ export default async function handler(
   res: NextApiResponse<ResponseData>
 ) {
   const mongoClient = await clientPromise;
-  const database = mongoClient.db("videogames");
+  const database = mongoClient.db("videogames-ec");
   const collection = database.collection("catalogue");
-  const documents = await collection.find({});
+  const documents = await collection.find({}).toArray();
   console.log({ documents });
 
   res.json(documents);
