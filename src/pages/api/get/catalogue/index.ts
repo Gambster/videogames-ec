@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import clientPromise from "@/lib/services/mongodb";
-import Product from "@/lib/types/product";
+import { authMiddleware } from "../../../../middleware/authMiddleware";
 
 type ResponseData = {
   message: string;
 };
 
-export default async function handler(
+const handler = async function (
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
 ) {
@@ -17,4 +17,6 @@ export default async function handler(
   console.log({ documents });
 
   res.json(documents);
-}
+};
+
+export default authMiddleware(handler);

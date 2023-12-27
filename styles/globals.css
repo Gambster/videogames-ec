@@ -2,5 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Importa la fuente Roboto desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Aplica la fuente Roboto a todo el cuerpo de la aplicación */
 body {
+  font-family: "Roboto", sans-serif;
 }
